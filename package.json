@@ -1,0 +1,19 @@
+{
+  "name": "atelierwebsitetests",
+  "version": "1.0.0",
+  "description": "UI testing for the testing atelier website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "Test",
+    "Atelier",
+    "Nightwatch"
+  ],
+  "author": "Ash Winter",
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch": "^0.9.14"
+  }
+}
