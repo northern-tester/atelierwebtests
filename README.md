@@ -10,10 +10,8 @@ Clone this mofo down
 npm install
 To run the sample test for chrome:
 
-./node_modules/.bin/nightwatch/ tests/google.js -e chrome
+./node_modules/.bin/nightwatch/ tests/hometosponsors.js -c "config/live.json" -e chrome
 
 To run the sample test for phantomjs:
 
-./node_modules/.bin/nightwatch/ tests/google.js -e
-
-(where PhantomJS is default)
+./node_modules/.bin/nightwatch/ tests/hometosponsors.js -c "config/live.json" -e phantomjs

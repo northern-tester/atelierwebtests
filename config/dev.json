@@ -26,52 +26,29 @@
             "enabled":false,
             "path":""
          },
-         "chrome":{
             "desiredCapabilities":{
                "browserName":"chrome",
                "javascriptEnabled":true,
                "acceptSslCerts":true
             }
          },
-         "phantomjs":{
+      "phantomjs":{
+         "launch_url":"http://localhost:3000",
+         "selenium_port":4444,
+         "selenium_host":"localhost",
+         "silent":true,
+         "screenshots":{
+         "enabled":false,
+         "path":""
+         },
             "desiredCapabilities":{
                "browserName":"phantomjs",
                "javascriptEnabled":true,
                "acceptSslCerts":true,
                "phantomjs.binary.path":"bin/phantomjs",
                "phantomjs.cli.args":[
-
-               ]
-            }
-         },
-         "live":{
-            "launch_url":"http://www.testingatelier.community",
-            "selenium_port":4444,
-            "selenium_host":"localhost",
-            "silent":true,
-            "screenshots":{
-               "enabled":false,
-               "path":""
-            },
-            "chrome":{
-               "desiredCapabilities":{
-                  "browserName":"chrome",
-                  "javascriptEnabled":true,
-                  "acceptSslCerts":true
-               }
-            },
-            "phantomjs":{
-               "desiredCapabilities":{
-                  "browserName":"phantomjs",
-                  "javascriptEnabled":true,
-                  "acceptSslCerts":true,
-                  "phantomjs.binary.path":"bin/phantomjs",
-                  "phantomjs.cli.args":[
-
-                  ]
-               }
-            }
+            ]
          }
-      }
-   }
+      }  
+   }  
 }
