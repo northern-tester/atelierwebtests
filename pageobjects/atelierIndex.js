@@ -1,13 +1,41 @@
 var indexCommands = {
-    navigateTo : function(pageToNav) {
-        this.api.pause(1000);
-        return this.api.waitForElementVisible('.form-group.js-form-type.input-sm', 1000)
-        .click('.form-group.js-form-type.input-sm')
-        .pause(1000)
-        .setValue('.form-group.js-form-type.input-sm', adType)
-        .pause(1000);
+    navigateToFromIndex : function(pageToNav) {
+        switch(pageToNav) {
+            case 'home':
+                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(1)', 1000)
+                .click('#navbar-brand > div > div > ul > li:nth-child(1)');
+                break;
+            case 'sponsorUs':
+                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(2)', 1000)
+                .click('#navbar-brand > div > div > ul > li:nth-child(2)');
+                break;
+            case 'callForPapers':
+                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(3)', 1000)
+                .click('#navbar-brand > div > div > ul > li:nth-child(3)');
+                break;
+            case 'previousAteliers':
+                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(4)', 1000)
+                .click('#navbar-brand > div > div > ul > li:nth-child(4)');
+                break;
+            default:
+                console.log('Sorry, this nav type is not valid');
+                throw new Error();
+        }
+    },
+    spinCarousel : function(direction) {
+        switch(direction) {
+            case 'left':
+                return this.api.click('#carousel-a > a.left.carousel-control').pause(1000);
+                break;
+            case 'right':
+                return this.api.click('#carousel-a > a.right.carousel-control').pause(1000);
+                break;
+            default:
+                console.log('Sorry, the carousel does not move in this direction');
+                throw new Error();
+        }
     }
-}
+};
 
 module.exports = {
   commands: [indexCommands],
@@ -15,7 +43,7 @@ module.exports = {
         return this.api.launchUrl; 
        },
   sections: {
-        carousel: {
+        speakerCarousel: {
             selector: '#speakers',
             elements: {
                 carouselRight: {
@@ -24,24 +52,11 @@ module.exports = {
                 carouselLeft: { 
                     selector: '#carousel-a > a.left.carousel-control'
                 },
-                ss3TabSelector: {
-                    selector: 'a[href="#ss3-tab"]>strong'  
+                carouselInner: {
+                    selector: '#carousel-a > div'  
                 },
-                ss4TabSelector: {
-                    selector: 'a[href="#ss4-tab"]>strong'  
-                },
-                ss5TabSelector: {
-                    selector: 'a[href="#ss5-tab"]>strong'  
-                },
-                ssp1to4TabSelector: {
-                    selector: 'a[href="#pub1-tab"]>strong'  
-                },
-                ssp5TabSelector: {
-                    selector: 'a[href="#pub1-tab"]>strong'  
-                },
-                channelHeader: { 
-                    selector: '/html/body/div[1]/div[2]/div[1]/form/fieldset/div[1]/h2',
-                    locateStrategy: 'xpath'
+                activeCarouselNameEntry: {
+                    selector: '#carousel-a > div > div.item.active > table > tbody > tr > td > h4'
                 }
         }
     },
@@ -63,5 +78,4 @@ module.exports = {
             }
          }
       }        
-  }
-};
+  };

@@ -14,6 +14,7 @@
   "author": "Ash Winter",
   "license": "ISC",
   "dependencies": {
+    "lint": "^1.1.2",
     "nightwatch": "^0.9.14"
   }
 }
