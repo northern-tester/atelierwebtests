@@ -2,5 +2,5 @@ atelierwebtests.sublime-workspace
 atelierwebtests.sublime-project
 phantomjsdriver.log
 selenium-debug.log
-node_modules/*
-reports/*
+node_modules
+reports
