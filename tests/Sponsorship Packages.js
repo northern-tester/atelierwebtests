@@ -23,7 +23,7 @@ module.exports = {
     atelierSponsorUs.expect.section('@sponsorInfo').to.be.visible.after(1000);
     var sponsorInfo = atelierSponsorUs.section.sponsorInfo;
     sponsorInfo.expect.element('@whatAmIInFor').to.be.present;
-    sponsorInfo.expect.element('@costTable').to.be.present.after(10000);
+    sponsorInfo.expect.element('@costTable').to.be.present;
     sponsorInfo.expect.element('@whatWillIGet').to.be.present;
     //Click twitter to get in touch
     sponsorInfo.click('@tweetContact');
