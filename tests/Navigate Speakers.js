@@ -1,5 +1,5 @@
 module.exports = {
-	'Navigate to homepage and review speaker content' : function (browser) {
+	'Navigate to Homepage and Review Speaker Content' : function (browser) {
 	//Index page object
 	var atelierIndex = browser.page.atelierIndex();
 	//navigate to index

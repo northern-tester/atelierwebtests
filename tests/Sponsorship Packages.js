@@ -1,5 +1,5 @@
 module.exports = {
-    'As a potential sponsor, browse sponsors, benefits and get in touch' : function (browser) {
+    'Browse Potential Sponsor Benefits and Get in Touch' : function (browser) {
     //Index page object
     var atelierIndex = browser.page.atelierIndex();
     //Sponsors page object
