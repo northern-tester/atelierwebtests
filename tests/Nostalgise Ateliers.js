@@ -19,7 +19,7 @@ module.exports = {
 	//Be inspired and navigate to Call for Papers
 	atelierPrevious.navigateToFromPrevious('callForPapers');
 	//Assert we've arrived
-	browser.assert.title("Leeds Testing Atelier - Call for Papers");
+	browser.assert.title("Testing Atelier - Call for Papers");
 	//Kill test
 	browser.end();
   }

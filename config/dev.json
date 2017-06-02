@@ -31,7 +31,6 @@
                "javascriptEnabled":true,
                "acceptSslCerts":true,
                "chromeOptions":{
-                  "args": ["--headless"]
                }
             }
          },

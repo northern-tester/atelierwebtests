@@ -40,7 +40,6 @@
                "acceptSslCerts":true,
                "phantomjs.binary.path":"bin/phantomjs",
                "phantomjs.cli.args":[
-
                ]
             }
          },
