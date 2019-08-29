@@ -2,20 +2,20 @@ var indexCommands = {
     navigateToFromIndex : function(pageToNav) {
         switch(pageToNav) {
             case 'home':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(1)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(1)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(1) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(1) > a');
                 break;
             case 'sponsorUs':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(2)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(2)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(2) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(2) > a');
                 break;
             case 'callForPapers':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(3)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(3)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(3) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(3) > a');
                 break;
             case 'previousAteliers':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(4)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(4)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(4) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(4) > a');
                 break;
             default:
                 console.log('Sorry, this nav type is not valid');
@@ -25,10 +25,12 @@ var indexCommands = {
     spinCarousel : function(direction) {
         switch(direction) {
             case 'left':
-                return this.api.click('#carousel-a > a.left.carousel-control').pause(1000);
+                return this.api.waitForElementVisible('#carousel-a > a.left.carousel-control', 1000)
+                .click('#carousel-a > a.left.carousel-control');
                 break;
             case 'right':
-                return this.api.click('#carousel-a > a.right.carousel-control').pause(1000);
+                return this.api.waitForElementVisible('#carousel-a > a.right.carousel-control', 1000)
+                .click('#carousel-a > a.right.carousel-control');
                 break;
             default:
                 console.log('Sorry, the carousel does not move in this direction');
@@ -64,16 +66,16 @@ module.exports = {
             selector : 'body > nav > div > div.navbar-header',
             elements: {
                 home: {
-                    selector: '#navbar-brand > div > div > ul > li:nth-child(1)'
+                    selector: '#navbar-brand > ul > div > div > ul > li:nth-child(1) > a'
                 },
                 sponsorUs: {
-                    selector: '#navbar-brand > div > div > ul > li:nth-child(2)'
+                    selector: '#navbar-brand > ul > div > div > ul > li:nth-child(2) > a'
                 },
                 callForPapers: {
-                    selector: '#navbar-brand > div > div > ul > li:nth-child(3)'
+                    selector: '#navbar-brand > ul > div > div > ul > li:nth-child(3) > a'
                 },
                 previousAteliers: {
-                    selector: '#navbar-brand > div > div > ul > li:nth-child(4)'
+                    selector: '#navbar-brand > ul > div > div > ul > li:nth-child(4) > a'
                 }
             }
          }

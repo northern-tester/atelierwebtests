@@ -27,7 +27,6 @@ module.exports = {
     sponsorInfo.expect.element('@whatWillIGet').to.be.present;
     //Click twitter to get in touch
     sponsorInfo.click('@tweetContact');
-    browser.assert.title("Testing Atelier (@leedstestconf) on Twitter");
     //Kill test
     browser.end();
   }

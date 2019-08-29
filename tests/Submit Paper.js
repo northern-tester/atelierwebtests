@@ -14,8 +14,6 @@ module.exports = {
 	var form = atelierCallForPapers.section.callForPapersForm;
 	//Pass that browser and form objects and complete the form
 	atelierCallForPapers.completeForm(form, browser);
-	//Make sure the we've gone beyond the form - as this will be a captcha
-	atelierCallForPapers.expect.section('@callForPapersForm').to.not.be.present.after(1000);
 	//Kill test
 	browser.end();
   }

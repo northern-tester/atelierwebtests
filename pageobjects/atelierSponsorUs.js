@@ -2,16 +2,16 @@ var sponsorCommands = {
     navigateToFromSponsors : function(pageToNav) {
         switch(pageToNav) {
             case 'home':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(1)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(1)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(1) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(1) > a');
                 break;
             case 'callForPapers':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(2)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(2)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(2) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(2) > a');
                 break;
             case 'previousAteliers':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(3)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(3)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(3) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(3) > a');
                 break;
             default:
                 console.log('Sorry, this nav type is not valid');

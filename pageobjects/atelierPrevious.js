@@ -2,16 +2,16 @@ var previousCommands = {
     navigateToFromPrevious : function(pageToNav) {
         switch(pageToNav) {
             case 'home':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(1)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(1)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(1) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(1) > a');
                 break;
             case 'sponsorUs':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(2)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(2)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(2) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(2) > a');
                 break;
             case 'callForPapers':
-                return this.api.waitForElementVisible('#navbar-brand > div > div > ul > li:nth-child(3)', 1000)
-                .click('#navbar-brand > div > div > ul > li:nth-child(3)');
+                return this.api.waitForElementVisible('#navbar-brand > ul > div > div > ul > li:nth-child(3) > a', 1000)
+                .click('#navbar-brand > ul > div > div > ul > li:nth-child(3) > a');
                 break;
             default:
                 console.log('Sorry, this nav type is not valid');
@@ -68,13 +68,13 @@ module.exports = {
        },
   sections: {
         AtelierOne: {
-            selector: 'body > div:nth-child(12)',
+            selector: 'body > div:nth-child(17)',
             elements: {
                 title: {
-                    selector: 'body > div:nth-child(12) > h4'  
+                    selector: 'body > div:nth-child(17) > h4'  
                 },
                 blurb: { 
-                    selector: 'body > div:nth-child(12) > p'
+                    selector: 'body > div:nth-child(17) > p'
                 },
                 carousel: {
                     selector: '#carousel-AtelierOne'  
@@ -82,13 +82,13 @@ module.exports = {
             }
         },
         AtelierTwo: {
-            selector: 'body > div:nth-child(10)',
+            selector: 'body > div:nth-child(15)',
             elements: {
                 title: {
-                    selector: 'body > div:nth-child(10) > h4' 
+                    selector: 'body > div:nth-child(15) > h4' 
                 },
                 blurb: { 
-                    selector: 'body > div:nth-child(10) > p'
+                    selector: 'body > div:nth-child(15) > p'
                 },
                 carousel: {
                     selector: '#carousel-AtelierTwo'  
@@ -96,13 +96,13 @@ module.exports = {
             }
         },
         AtelierThree: {
-                selector: 'body > div:nth-child(8)',
+                selector: 'body > div:nth-child(13)',
                 elements: {
                 title: {
-                    selector: 'body > div:nth-child(8) > h4'  
+                    selector: 'body > div:nth-child(13) > h4'  
                 },
                 blurb: { 
-                    selector: 'body > div:nth-child(8) > p'
+                    selector: 'body > div:nth-child(13) > p'
                 },
                 carousel: {
                     selector: '#carousel-AtelierThree'  
@@ -113,13 +113,13 @@ module.exports = {
             selector : 'body > nav > div > div.navbar-header',
             elements: {
                 home: {
-                    selector: '#navbar-brand > div > div > ul > li:nth-child(1)'
+                    selector: '#navbar-brand > ul > div > div > ul > li:nth-child(1) > a'
                 },
                 sponsorUs: {
-                    selector: '#navbar-brand > div > div > ul > li:nth-child(2)'
+                    selector: '#navbar-brand > ul > div > div > ul > li:nth-child(2) > a'
                 },
                 callForPapers: {
-                    selector: '#navbar-brand > div > div > ul > li:nth-child(3)'
+                    selector: '#navbar-brand > ul > div > div > ul > li:nth-child(3) > a'
                 }
             }
          }

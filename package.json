@@ -4,13 +4,15 @@
   "description": "UI testing for the testing atelier website",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev": "./node_modules/.bin/nightwatch tests/ -c config/dev.json",
+    "live": "./node_modules/.bin/nightwatch tests/ -c config/live.json"    
   },
   "keywords": [
     "Test",
     "Atelier",
     "Nightwatch"
   ],
+  "repository": "git@github.com:northern-tester/atelierwebtests.git",
   "author": "Ash Winter",
   "license": "ISC",
   "dependencies": {
