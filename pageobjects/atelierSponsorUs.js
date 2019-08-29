@@ -17,19 +17,6 @@ var sponsorCommands = {
                 console.log('Sorry, this nav type is not valid');
                 throw new Error();
         }
-    },
-    spinCarousel : function(direction) {
-        switch(direction) {
-            case 'left':
-                return this.api.click('#carousel-a > a.left.carousel-control').pause(1000);
-                break;
-            case 'right':
-                return this.api.click('#carousel-a > a.right.carousel-control').pause(1000);
-                break;
-            default:
-                console.log('Sorry, the carousel does not move in this direction');
-                throw new Error();
-        }
     }
 };
 
@@ -39,23 +26,6 @@ module.exports = {
         return this.api.launchUrl; 
        },
   sections: {
-        sponsorCarousel: {
-            selector: '#sponsors',
-            elements: {
-                carouselRight: {
-                    selector: '#carousel-a > a.right.carousel-control'  
-                },
-                carouselLeft: { 
-                    selector: '#carousel-a > a.left.carousel-control'
-                },
-                carouselInner: {
-                    selector: '#carousel-a > div'
-                },
-                activeCarouselNameEntry: {
-                    selector: '#carousel-a > div > div.item.active > table > tbody > tr > td.blurb > h4'
-                }
-        }
-    },
         sponsorInfo: {
             selector : '#sponsorus',
             elements: {

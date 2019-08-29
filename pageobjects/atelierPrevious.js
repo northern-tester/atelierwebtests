@@ -68,13 +68,13 @@ module.exports = {
        },
   sections: {
         AtelierOne: {
-            selector: 'body > div:nth-child(17)',
+            selector: 'body > div > div:nth-child(17)',
             elements: {
                 title: {
-                    selector: 'body > div:nth-child(17) > h4'  
+                    selector: 'body > div > div:nth-child(17) > h4'  
                 },
                 blurb: { 
-                    selector: 'body > div:nth-child(17) > p'
+                    selector: 'body > div > div:nth-child(17) > p'
                 },
                 carousel: {
                     selector: '#carousel-AtelierOne'  
@@ -82,13 +82,13 @@ module.exports = {
             }
         },
         AtelierTwo: {
-            selector: 'body > div:nth-child(15)',
+            selector: 'body > div > div:nth-child(15)',
             elements: {
                 title: {
-                    selector: 'body > div:nth-child(15) > h4' 
+                    selector: 'body > div > div:nth-child(15) > h4' 
                 },
                 blurb: { 
-                    selector: 'body > div:nth-child(15) > p'
+                    selector: 'body > div > div:nth-child(15) > p'
                 },
                 carousel: {
                     selector: '#carousel-AtelierTwo'  
@@ -96,13 +96,13 @@ module.exports = {
             }
         },
         AtelierThree: {
-                selector: 'body > div:nth-child(13)',
+                selector: 'body > div > div:nth-child(13)',
                 elements: {
                 title: {
-                    selector: 'body > div:nth-child(13) > h4'  
+                    selector: 'body > div > div:nth-child(13) > h4'  
                 },
                 blurb: { 
-                    selector: 'body > div:nth-child(13) > p'
+                    selector: 'body > div > div:nth-child(13) > p'
                 },
                 carousel: {
                     selector: '#carousel-AtelierThree'  

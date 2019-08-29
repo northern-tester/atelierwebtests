@@ -8,17 +8,6 @@ module.exports = {
     atelierIndex.navigate();
     //Navigate to sponsors page
     atelierIndex.navigateToFromIndex('sponsorUs');
-    //Browse previous sponsors in carousel
-    var carousel = atelierSponsorUs.section.sponsorCarousel;
-    //Manipulate Carousel
-    carousel.getText('@activeCarouselNameEntry', function(initialResult) {
-    //Move the carousel right and get a different speaker
-      atelierSponsorUs.spinCarousel('right');
-      carousel.expect.element('@activeCarouselNameEntry').text.to.not.equal(initialResult.value);
-      //Move the carousel left and get the original speaker
-      atelierSponsorUs.spinCarousel('left');
-      carousel.expect.element('@activeCarouselNameEntry').text.to.equal(initialResult.value);
-    });
     //Consume sponsor information
     atelierSponsorUs.expect.section('@sponsorInfo').to.be.visible.after(1000);
     var sponsorInfo = atelierSponsorUs.section.sponsorInfo;

@@ -42,7 +42,7 @@ module.exports = {
             selector: 'body > section > div > div > div:nth-child(2) > form',
             elements: {
                     name: {
-                        selector: '#Name'  
+                        selector: '#name'  
                     },
                     email: { 
                         selector: '#email'

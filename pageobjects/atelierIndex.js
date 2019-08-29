@@ -22,21 +22,6 @@ var indexCommands = {
                 throw new Error();
         }
     },
-    spinCarousel : function(direction) {
-        switch(direction) {
-            case 'left':
-                return this.api.waitForElementVisible('#carousel-a > a.left.carousel-control', 1000)
-                .click('#carousel-a > a.left.carousel-control');
-                break;
-            case 'right':
-                return this.api.waitForElementVisible('#carousel-a > a.right.carousel-control', 1000)
-                .click('#carousel-a > a.right.carousel-control');
-                break;
-            default:
-                console.log('Sorry, the carousel does not move in this direction');
-                throw new Error();
-        }
-    }
 };
 
 module.exports = {
@@ -45,23 +30,6 @@ module.exports = {
         return this.api.launchUrl; 
        },
   sections: {
-        speakerCarousel: {
-            selector: '#speakers',
-            elements: {
-                carouselRight: {
-                    selector: '#carousel-a > a.right.carousel-control'  
-                },
-                carouselLeft: { 
-                    selector: '#carousel-a > a.left.carousel-control'
-                },
-                carouselInner: {
-                    selector: '#carousel-a > div'  
-                },
-                activeCarouselNameEntry: {
-                    selector: '#carousel-a > div > div.item.active > table > tbody > tr > td > h4'
-                }
-        }
-    },
         navBar: {
             selector : 'body > nav > div > div.navbar-header',
             elements: {
