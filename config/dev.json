@@ -3,7 +3,7 @@
       "tests"
    ],
    "output_folder":"reports",
-   "custom_commands_path":"lib/",
+   "custom_commands_path":"",
    "custom_assertions_path":"",
    "page_objects_path":"pageobjects/",
    "globals_path":"./globals.js",
@@ -52,6 +52,6 @@
                "phantomjs.cli.args":[
             ]
          }
-      }  
+      }
    }  
 }
